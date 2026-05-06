@@ -1,0 +1,121 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import '../commons/index.css';
+
+:root {
+  /* Typography */
+  --spectrum-metriccard-label-font-weight: var(--spectrum-alias-heading-text-font-weight-regular);
+  --spectrum-metriccard-label-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-metriccard-label-font-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-metriccard-label-line-height: var(--spectrum-alias-line-height-body);
+
+  --spectrum-metriccard-value-font-weight: var(--spectrum-alias-heading-text-font-weight-regular);
+  --spectrum-metriccard-value-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-metriccard-value-font-size: var(--spectrum-alias-heading-m-text-size);
+  --spectrum-metriccard-value-line-height: var(--spectrum-alias-heading-text-line-height);
+
+  --spectrum-metriccard-trend-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-metriccard-trend-font-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-metriccard-trend-line-height: var(--spectrum-alias-line-height-body);
+
+  /* Layout */
+  --spectrum-metriccard-border-width: var(--spectrum-alias-border-size-thin);
+  --spectrum-metriccard-padding-block: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-metriccard-padding-inline: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-metriccard-border-radius: var(--spectrum-border-radius);
+  --spectrum-metriccard-gap-label-value: var(--spectrum-global-dimension-static-size-85);
+  --spectrum-metriccard-gap-value-trend: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-metriccard-gap-label-inline: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-metriccard-icon-size: var(--spectrum-global-dimension-size-200);
+  --spectrum-metriccard-trend-icon-size: var(--spectrum-global-dimension-size-150);
+
+  /* Color — layer tokens follow page background in light / dark */
+  --spectrum-metriccard-background-color: var(--spectrum-global-color-gray-75);
+  --spectrum-metriccard-border-color: var(--spectrum-gray-visual-color);
+  --spectrum-metriccard-label-color: var(--spectrum-alias-label-text-color);
+  --spectrum-metriccard-value-color: var(--spectrum-alias-heading-text-color);
+  --spectrum-metriccard-trend-context-color: var(--spectrum-alias-text-color);
+}
+
+.spectrum-MetricCard {
+  box-sizing: border-box;
+  min-inline-size: 0;
+  inline-size: 100%;
+  max-inline-size: 320px;
+
+  padding-block: var(--spectrum-metriccard-padding-block);
+  padding-inline: var(--spectrum-metriccard-padding-inline);
+
+  border-style: solid;
+  border-width: var(--spectrum-metriccard-border-width);
+  border-radius: var(--spectrum-metriccard-border-radius);
+}
+
+.spectrum-MetricCard-labelRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spectrum-metriccard-gap-label-inline);
+  margin-block-end: var(--spectrum-metriccard-gap-label-value);
+}
+
+.spectrum-MetricCard-labelRow .spectrum-MetricCard-customIcon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--spectrum-metriccard-icon-size);
+  block-size: var(--spectrum-metriccard-icon-size);
+  color: var(--spectrum-metriccard-label-color);
+}
+
+.spectrum-MetricCard-label {
+  margin: 0;
+  font-weight: var(--spectrum-metriccard-label-font-weight);
+  font-style: var(--spectrum-metriccard-label-font-style);
+  font-size: var(--spectrum-metriccard-label-font-size);
+  line-height: var(--spectrum-metriccard-label-line-height);
+}
+
+.spectrum-MetricCard-value {
+  margin: 0;
+  font-weight: var(--spectrum-metriccard-value-font-weight);
+  font-style: var(--spectrum-metriccard-value-font-style);
+  font-size: var(--spectrum-metriccard-value-font-size);
+  line-height: var(--spectrum-metriccard-value-line-height);
+  margin-block-end: var(--spectrum-metriccard-gap-value-trend);
+}
+
+.spectrum-MetricCard-trend {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spectrum-global-dimension-static-size-65);
+  font-weight: var(--spectrum-metriccard-trend-font-weight);
+  font-size: var(--spectrum-metriccard-trend-font-size);
+  line-height: var(--spectrum-metriccard-trend-line-height);
+}
+
+.spectrum-MetricCard-trend .spectrum-MetricCard-trendChevron {
+  flex-shrink: 0;
+  inline-size: var(--spectrum-metriccard-trend-icon-size);
+  block-size: var(--spectrum-metriccard-trend-icon-size);
+}
+
+.spectrum-MetricCard-trendLabel {
+  color: var(--spectrum-metriccard-trend-context-color);
+}
+
+.spectrum-MetricCard--highlighted {
+  --spectrum-metriccard-border-width: var(--spectrum-alias-border-size-thick);
+}

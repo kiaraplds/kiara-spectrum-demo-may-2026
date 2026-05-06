@@ -1,0 +1,106 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import '../commons/index.css';
+
+:root {
+  /* Font */
+  --spectrum-campaignbanner-title-font-weight: var(--spectrum-alias-heading-text-font-weight-regular);
+  --spectrum-campaignbanner-title-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-campaignbanner-title-font-size: var(--spectrum-alias-heading-xs-text-size);
+  --spectrum-campaignbanner-title-line-height: var(--spectrum-alias-heading-text-line-height);
+
+  --spectrum-campaignbanner-subtitle-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-campaignbanner-subtitle-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-campaignbanner-subtitle-font-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-campaignbanner-subtitle-line-height: var(--spectrum-alias-line-height-body);
+
+  /* Size */
+  --spectrum-campaignbanner-border-width: var(--spectrum-alias-border-size-thick);
+  --spectrum-campaignbanner-border-radius: var(--spectrum-border-radius);
+  --spectrum-campaignbanner-icon-size: var(--spectrum-global-dimension-size-275);
+
+  /* Spacing */
+  --spectrum-campaignbanner-padding-block: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-campaignbanner-padding-inline: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-campaignbanner-gap-icon-text: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-campaignbanner-gap-text-cta: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-campaignbanner-title-to-subtitle: var(--spectrum-global-dimension-static-size-65);
+
+  /* Color */
+  --spectrum-campaignbanner-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-campaignbanner-border-color: var(--spectrum-gray-visual-color);
+  --spectrum-campaignbanner-title-color: var(--spectrum-alias-heading-text-color);
+  --spectrum-campaignbanner-subtitle-color: var(--spectrum-alias-text-color);
+  --spectrum-campaignbanner-border-color-info: var(--spectrum-informative-visual-color);
+  --spectrum-campaignbanner-border-color-success: var(--spectrum-positive-visual-color);
+  --spectrum-campaignbanner-border-color-warning: var(--spectrum-notice-visual-color);
+  --spectrum-campaignbanner-border-color-error: var(--spectrum-negative-visual-color);
+}
+
+.spectrum-CampaignBanner {
+  box-sizing: border-box;
+  inline-size: 100%;
+
+  padding-block: var(--spectrum-campaignbanner-padding-block);
+  padding-inline: var(--spectrum-campaignbanner-padding-inline);
+
+  border-block-width: var(--spectrum-campaignbanner-border-width);
+  border-inline-width: var(--spectrum-campaignbanner-border-width);
+  border-style: solid;
+  border-radius: var(--spectrum-campaignbanner-border-radius);
+}
+
+.spectrum-CampaignBanner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spectrum-campaignbanner-gap-icon-text);
+  box-sizing: border-box;
+  inline-size: 100%;
+}
+
+.spectrum-CampaignBanner-icon {
+  flex-shrink: 0;
+  inline-size: var(--spectrum-campaignbanner-icon-size);
+  block-size: var(--spectrum-campaignbanner-icon-size);
+}
+
+.spectrum-CampaignBanner-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-inline-size: 0;
+  gap: var(--spectrum-campaignbanner-title-to-subtitle);
+}
+
+.spectrum-CampaignBanner-title {
+  margin: 0;
+  font-weight: var(--spectrum-campaignbanner-title-font-weight);
+  font-style: var(--spectrum-campaignbanner-title-font-style);
+  font-size: var(--spectrum-campaignbanner-title-font-size);
+  line-height: var(--spectrum-campaignbanner-title-line-height);
+}
+
+.spectrum-CampaignBanner-subtitle {
+  margin: 0;
+  font-weight: var(--spectrum-campaignbanner-subtitle-font-weight);
+  font-style: var(--spectrum-campaignbanner-subtitle-font-style);
+  font-size: var(--spectrum-campaignbanner-subtitle-font-size);
+  line-height: var(--spectrum-campaignbanner-subtitle-line-height);
+}
+
+.spectrum-CampaignBanner-cta {
+  flex-shrink: 0;
+  margin-inline-start: var(--spectrum-campaignbanner-gap-text-cta);
+}

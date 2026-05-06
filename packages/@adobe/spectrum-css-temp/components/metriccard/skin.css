@@ -1,0 +1,64 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@media (forced-colors: active) {
+  .spectrum-MetricCard {
+    --highcontrast-metriccard-background-color: Background;
+    --highcontrast-metriccard-border-color: ButtonBorder;
+    --highcontrast-metriccard-label-color: CanvasText;
+    --highcontrast-metriccard-value-color: CanvasText;
+    --highcontrast-metriccard-trend-context-color: CanvasText;
+    --highcontrast-metriccard-trend-positive: CanvasText;
+    --highcontrast-metriccard-trend-negative: CanvasText;
+    --highcontrast-metriccard-trend-neutral: CanvasText;
+  }
+}
+
+.spectrum-MetricCard {
+  background-color: var(--highcontrast-metriccard-background-color, var(--spectrum-metriccard-background-color));
+  border-color: var(--highcontrast-metriccard-border-color, var(--spectrum-metriccard-border-color));
+}
+
+.spectrum-MetricCard-label {
+  color: var(--highcontrast-metriccard-label-color, var(--spectrum-metriccard-label-color));
+}
+
+.spectrum-MetricCard-value {
+  color: var(--highcontrast-metriccard-value-color, var(--spectrum-metriccard-value-color));
+}
+
+.spectrum-MetricCard-trendLabel {
+  color: var(--highcontrast-metriccard-trend-context-color, var(--spectrum-metriccard-trend-context-color));
+}
+
+.spectrum-MetricCard-trend--positive .spectrum-MetricCard-trendPercent,
+.spectrum-MetricCard-trend--positive .spectrum-MetricCard-trendChevron {
+  color: var(--highcontrast-metriccard-trend-positive, var(--spectrum-positive-visual-color));
+}
+
+.spectrum-MetricCard-trend--negative .spectrum-MetricCard-trendPercent,
+.spectrum-MetricCard-trend--negative .spectrum-MetricCard-trendChevron {
+  color: var(--highcontrast-metriccard-trend-negative, var(--spectrum-negative-visual-color));
+}
+
+.spectrum-MetricCard-trend--neutral .spectrum-MetricCard-trendPercent,
+.spectrum-MetricCard-trend--neutral .spectrum-MetricCard-trendChevron {
+  color: var(--highcontrast-metriccard-trend-neutral, var(--spectrum-gray-visual-color));
+}
+
+.spectrum-MetricCard--default {
+  border-color: var(--highcontrast-metriccard-border-color, var(--spectrum-metriccard-border-color));
+}
+
+.spectrum-MetricCard--highlighted {
+  border-color: var(--highcontrast-metriccard-border-color, var(--spectrum-informative-visual-color));
+}

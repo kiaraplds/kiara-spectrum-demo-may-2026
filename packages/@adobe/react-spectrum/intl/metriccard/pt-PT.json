@@ -1,0 +1,6 @@
+{
+  "trendUp": "Subida de {percent}{context}",
+  "trendDown": "Descida de {percent}{context}",
+  "trendNeutral": "Sem alteração{context}",
+  "metricDetails": "{value}. {trend}."
+}

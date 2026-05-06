@@ -1,0 +1,65 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@media (forced-colors: active) {
+  .spectrum-CampaignBanner {
+    --highcontrast-campaignbanner-background-color: Background;
+    --highcontrast-campaignbanner-title-color: CanvasText;
+    --highcontrast-campaignbanner-subtitle-color: CanvasText;
+    --highcontrast-campaignbanner-border-color: ButtonBorder;
+  }
+}
+
+.spectrum-CampaignBanner {
+  background-color: var(--highcontrast-campaignbanner-background-color, var(--spectrum-campaignbanner-background-color));
+  border-color: var(--highcontrast-campaignbanner-border-color, var(--spectrum-campaignbanner-border-color));
+}
+
+.spectrum-CampaignBanner-title {
+  color: var(--highcontrast-campaignbanner-title-color, var(--spectrum-campaignbanner-title-color));
+}
+
+.spectrum-CampaignBanner-subtitle {
+  color: var(--highcontrast-campaignbanner-subtitle-color, var(--spectrum-campaignbanner-subtitle-color));
+}
+
+.spectrum-CampaignBanner--info {
+  border-color: var(--highcontrast-campaignbanner-border-color, var(--spectrum-campaignbanner-border-color-info));
+}
+
+.spectrum-CampaignBanner--info .spectrum-CampaignBanner-icon {
+  color: var(--highcontrast-campaignbanner-border-color, var(--spectrum-campaignbanner-border-color-info));
+}
+
+.spectrum-CampaignBanner--success {
+  border-color: var(--highcontrast-campaignbanner-border-color, var(--spectrum-campaignbanner-border-color-success));
+}
+
+.spectrum-CampaignBanner--success .spectrum-CampaignBanner-icon {
+  color: var(--highcontrast-campaignbanner-border-color, var(--spectrum-campaignbanner-border-color-success));
+}
+
+.spectrum-CampaignBanner--warning {
+  border-color: var(--highcontrast-campaignbanner-border-color, var(--spectrum-campaignbanner-border-color-warning));
+}
+
+.spectrum-CampaignBanner--warning .spectrum-CampaignBanner-icon {
+  color: var(--highcontrast-campaignbanner-border-color, var(--spectrum-campaignbanner-border-color-warning));
+}
+
+.spectrum-CampaignBanner--error {
+  border-color: var(--highcontrast-campaignbanner-border-color, var(--spectrum-campaignbanner-border-color-error));
+}
+
+.spectrum-CampaignBanner--error .spectrum-CampaignBanner-icon {
+  color: var(--highcontrast-campaignbanner-border-color, var(--spectrum-campaignbanner-border-color-error));
+}

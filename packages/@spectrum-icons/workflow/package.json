@@ -11,7 +11,7 @@
     "./package.json": "./package.json",
     "./*": {
       "types": "./*.d.ts",
-      "import": "./*.module.mjs",
+      "import": "./*.js",
       "require": "./*.js"
     }
   },

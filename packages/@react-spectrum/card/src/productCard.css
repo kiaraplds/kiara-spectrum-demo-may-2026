@@ -1,0 +1,108 @@
+/*
+ * Copyright 2026 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.productCard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  max-inline-size: var(--spectrum-global-dimension-size-4600);
+  border-radius: var(--spectrum-card-border-radius);
+  background-color: var(--spectrum-card-background-color);
+  border: 1px solid var(--spectrum-card-border-color);
+  outline: none;
+  overflow: hidden;
+  transition: border-color var(--spectrum-global-animation-duration-100) ease-out,
+    box-shadow var(--spectrum-global-animation-duration-100) ease-out;
+}
+
+.productCard:focus-within {
+  border-color: var(--spectrum-card-border-color-key-focus);
+  box-shadow: 0 0 0 1px var(--spectrum-card-border-color-key-focus);
+}
+
+.productCard:hover:not(.productCard--quiet) {
+  border-color: var(--spectrum-card-border-color-hover);
+}
+
+.productCard--quiet:hover {
+  border-color: var(--spectrum-card-border-color-hover);
+}
+
+.productCard--quiet {
+  border-color: transparent;
+  background-color: transparent;
+  border-radius: var(--spectrum-card-quiet-border-radius);
+}
+
+.productCard--quiet:focus-within {
+  box-shadow: 0 0 0 1px var(--spectrum-card-border-color-key-focus);
+}
+
+.productCard--horizontal {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.imageRegion {
+  position: relative;
+  flex: 0 0 auto;
+  inline-size: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--spectrum-global-color-gray-200);
+  overflow: hidden;
+}
+
+.productCard--horizontal .imageRegion {
+  inline-size: var(--spectrum-global-dimension-size-2400);
+  max-inline-size: 44%;
+  aspect-ratio: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: var(--spectrum-global-dimension-size-100);
+  padding: var(--spectrum-card-body-padding);
+  min-inline-size: 0;
+}
+
+.footer {
+  margin-block-start: auto;
+  padding-block-start: var(--spectrum-global-dimension-size-150);
+}
+
+.title {
+  margin: 0;
+  color: var(--spectrum-global-color-gray-900);
+  font-size: var(--spectrum-alias-heading-xl-text-size);
+  font-weight: var(--spectrum-alias-heading-xl-text-font-weight);
+  line-height: var(--spectrum-alias-heading-xl-text-line-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.price {
+  margin: 0;
+  color: var(--spectrum-global-color-gray-800);
+  font-size: var(--spectrum-alias-body-text-font-size);
+  line-height: var(--spectrum-alias-body-text-line-height);
+}
+
+.coverImage {
+  inline-size: 100%;
+  block-size: 100%;
+}

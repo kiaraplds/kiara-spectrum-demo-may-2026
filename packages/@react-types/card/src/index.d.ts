@@ -10,4 +10,5 @@
  * governing permissions and limitations under the License.
  */
 
-export {AriaCardViewProps, SpectrumCardProps, SpectrumCardViewProps} from '@react-spectrum/card';
+export {ProductCard} from '@react-spectrum/card';
+export type {AriaCardViewProps, SpectrumCardProps, SpectrumCardViewProps, ProductCardProps, ProductCardVariant} from '@react-spectrum/card';

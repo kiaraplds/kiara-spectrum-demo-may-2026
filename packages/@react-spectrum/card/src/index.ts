@@ -22,3 +22,6 @@ export type {GalleryLayoutOptions} from '@adobe/react-spectrum/private/card/Gall
 export type {GridLayoutOptions} from '@adobe/react-spectrum/private/card/GridLayout';
 export type {WaterfallLayoutOptions} from '@adobe/react-spectrum/private/card/WaterfallLayout';
 export type {SpectrumCardProps, AriaCardViewProps, SpectrumCardViewProps} from '@adobe/react-spectrum/private/card/types';
+
+export {ProductCard} from './ProductCard';
+export type {ProductCardProps, ProductCardVariant} from './ProductCard';

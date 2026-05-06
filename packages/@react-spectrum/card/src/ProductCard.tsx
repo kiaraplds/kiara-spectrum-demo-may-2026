@@ -66,6 +66,7 @@ export interface ProductCardProps {
 /**
  * ProductCard presents commerce-style content: imagery, title, price, and an add-to-cart action,
  * using Spectrum design tokens for spacing, color, and type.
+ * The primary action is a Spectrum `Button`, which provides keyboard interaction (`Enter` and `Space`) via React Aria.
  */
 export const ProductCard = forwardRef<HTMLElement, ProductCardProps>(function ProductCard(props, ref) {
   let {

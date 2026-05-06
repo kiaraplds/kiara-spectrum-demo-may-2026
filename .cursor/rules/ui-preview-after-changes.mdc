@@ -1,0 +1,33 @@
+---
+description: After UI-related edits, show the Storybook yarn command and clickable localhost URL for this repo.
+alwaysApply: true
+---
+
+# UI preview reminder (react-spectrum-demo)
+
+When your changes affect **user-visible UI** (React Spectrum components, Spectrum CSS, Storybook stories, chromatic stories, or MDX examples), end the same response with a short **Preview** block so the user can run Storybook and open it from Cursor.
+
+Use this repo’s defaults unless `package.json` scripts differ:
+
+**Main Storybook (v3 / default `yarn start`):**
+
+```bash
+yarn start
+```
+
+**Local URL (clickable in Cursor):** [http://localhost:9003](http://localhost:9003)
+
+**S2 Storybook** (only if the change is under S2 / `.storybook-s2`):
+
+```bash
+yarn start:s2
+```
+
+**Local URL:** [http://localhost:6006](http://localhost:6006)
+
+Rules:
+
+- Print the **exact** `yarn` line from this project (`yarn start` or `yarn start:s2`), not a paraphrase.
+- Always use the full `http://localhost:…` link (with port) so it is clickable in the chat UI.
+- If Storybook is already running, still include the link; mention they can refresh if the dev server is up.
+- Skip this block only when the change is purely non-UI (types-only, tests without stories, tooling, docs with no live examples).

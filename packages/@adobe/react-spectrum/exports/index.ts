@@ -72,6 +72,7 @@ export {MenuTrigger} from '../src/menu/MenuTrigger';
 export {SubmenuTrigger} from '../src/menu/SubmenuTrigger';
 export {Meter} from '../src/meter/Meter';
 export {MetricCard} from '../src/metriccard/MetricCard';
+export {NotificationDot} from '../src/notificationdot/NotificationDot';
 export {NumberField} from '../src/numberfield/NumberField';
 export {Picker} from '../src/picker/Picker';
 export {ProgressBar} from '../src/progress/ProgressBar';
@@ -179,6 +180,7 @@ export type {SpectrumMenuDialogTriggerProps} from '../src/menu/ContextualHelpTri
 export type {SpectrumSubmenuTriggerProps} from '../src/menu/SubmenuTrigger';
 export type {SpectrumMeterProps} from '../src/meter/Meter';
 export type {SpectrumMetricCardProps} from '../src/metriccard/MetricCard';
+export type {SpectrumNotificationDotProps, SpectrumNotificationDotColor} from '../src/notificationdot/NotificationDot';
 export type {SpectrumNumberFieldProps} from '../src/numberfield/NumberField';
 export type {SpectrumPickerProps} from '../src/picker/Picker';
 export type {SpectrumProgressBarProps} from '../src/progress/ProgressBarBase';
